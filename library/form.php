@@ -78,7 +78,7 @@
   {
       public $placeholder, $tooltip;
 
-      function __construct($name, $value, $id, $classname, $placeholder, $label = '',  $tooltip, $validate)
+      function __construct($name, $id, $value, $placeholder, $classname, $label = '',  $tooltip = null, $validate = null)
       {
         $this->name = $name;
         $this->type = 'text';
@@ -113,7 +113,7 @@
   {
       public $tooltip;
 
-      function __construct($name, $value, $id, $classname,$label = '',  $tooltip, $validate)
+      function __construct($name, $id, $value, $placeholder, $classname, $label = '',  $tooltip = null, $validate = null)
       {
         $this->name = $name;
         $this->type = 'text';
@@ -151,7 +151,7 @@
   {
       public $placeholder, $tooltip;
       
-      function __construct($name, $value, $id, $classname, $placeholder, $label, $tooltip, $validate)
+      function __construct($name,$id,$value, $placeholder, $class, $label = '', $tooltip, $validate)
       {
         $this->name = $name;
         $this->type = 'password';
@@ -196,7 +196,7 @@
   
     function draw_input()
     {
-          $output = '<button type = "'.$this->type.'" id = "'.$this->id.'" class = "tumble-software-form-span4">'.$this->text.'</button>';
+          $output = '<button type = "'.$this->type.'" id = "'.$this->id.'" class = "tumble-software-form-span1">'.$this->text.'</button>';
           return $output;
     }
   
@@ -211,24 +211,24 @@
       {
         $this->id = $id;
         $this->form_display_type = $form_display;
-        $this->submit_button = null;      
+        $this->submit_button = array();      
       }
       
-      function add_text_input($name, $placeholder, $value, $id, $class, $label = '', $tooltip, $validate)
+      function add_text_input($name,$id,$value, $placeholder, $class, $label = '', $tooltip, $validate)
       {
-         $this->arr_form_elements[] = new text_input($name,$value,'','',$placeholder, $label, $tooltip, $validate);
+         $this->arr_form_elements[] = new text_input($name,$id,$value, $placeholder, $class, $label, $tooltip, $validate);
           
       }
       
-      function add_password_input($name, $placeholder, $value, $id, $class, $label = '',$tooltip, $validate)
+      function add_password_input($name,$id,$value, $placeholder, $class, $label = '', $tooltip, $validate)
       {
-         $this->arr_form_elements[] = new password_input($name,$value,'','',$placeholder, $label, $tooltip, $validate);
+         $this->arr_form_elements[] = new password_input($name,$id,$value, $placeholder, $class, $label, $tooltip, $validate);
            
       }
       
-      function add_checkbox_input($name, $value, $id, $class, $label = '',$tooltip, $validate)
+      function add_checkbox_input($name,$id,$value, $placeholder, $class, $label = '', $tooltip, $validate)
       {
-        $this->arr_form_elements[] = new checkbox_input($name,$value,'','', $label, $tooltip, $validate);
+        $this->arr_form_elements[] = new checkbox_input($name,$id,$value, $placeholder, $class, $label, $tooltip, $validate);
       }
       
       function add_add_many($obj_add_many)
@@ -238,7 +238,7 @@
       
       function add_submit_button($type, $id, $text)
       {
-         $this->submit_button = new submit_button($type, $id, $text);
+         $this->submit_button[] = new submit_button($type, $id, $text);
       }
       
       function output_segment()
@@ -297,8 +297,11 @@
           
           if(isset($this->submit_button) && $str_default_class == 'column')
           {
-            $output .= '<div class = "tumble-software-form-column-input tumble-software-input-button">'.$this->submit_button->draw_input() . '</div>';
-          
+            
+            foreach($this->submit_button as $key3=>$submit_button)
+            {
+            $output .= '<div class = "tumble-software-form-column-input tumble-software-input-button tumble-software-form-span'.count($this->submit_button).'">'.$submit_button->draw_input() . '</div>';
+            }
           }
           
           
@@ -332,6 +335,9 @@
         $this->form_display_type = $form_display_type;
         $this->output_messages = $output_messages;
         $this->messages = new messages();
+        
+        
+        $this->arr_ajax = array();
 
         
      }
@@ -344,15 +350,10 @@
         return $segment;
      }
      
-     function ajax($action,$element_id,$method, $event, $return_type, $database)
+     function ajax($ajax)
      {
-          if($this->form_type == FORM_AJAX)
-          {
-            $ajax_form = new ajax($action, $this->form_id, $element_id, $event, '', 'JSON', $method);
-            $ajax_form->database_store_ajax_call($database);
-            $this->ajax = $ajax_form;                         
-          }
-
+                  
+         $this->arr_ajax[] = $ajax;
      }
      
      function process_form($error_msg_type)
@@ -386,7 +387,14 @@
                            {
                               case FORM_TOOLTIPS_ERRORS:
                               
-                                    $tooltip = new tooltip();
+                                    
+                                    
+                                      $tooltip = new tooltip();
+                                      $tooltip->data_tip = "left";
+                                      $tooltip->data_fade_out = '5000';
+                                      $tooltip->data_fade_in = '2000';
+                                      $tooltip->data_tooltip_event = 'load';
+                                      $tooltip->class = 'tumble-tooltip';
                                     $tooltip->data_tooltip_content = $input->validate->msg;
                                     $tooltip->data_classes = "tooltip-error-class";
                                     $input->tooltip = $tooltip;
@@ -462,10 +470,15 @@
         }
         //var_dump($innerHTML);
         $outerHTML = '<form name = "'.$this->form_name.'" enctype="multipart/form-data" method = "post" action = "'.$this->form_action.'" id = "'.$this->form_id.'" class = "tumble-software-form"><div class = "tumble-software-messages">'.$error_str.'</div><input type = "hidden" name = "'.$this->form_id.'-submit" value = "1" />' . $innerHTML . '</form>';
-        if(isset($form->ajax))
+        foreach($this->arr_ajax as $key=>$ajax_obj)
         {
-            $outerHTML .= $form->ajax->call_script($this->output_messages);
+            $outerHTML .= $ajax_obj->ajax_process();
+        
         }
+        
+        
+        
+        
         return $outerHTML;
      
      }
