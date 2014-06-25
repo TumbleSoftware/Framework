@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<section>
+  <name>Settings</name>
+  <addto>ROOT</addto>
+  <folder>settings</folder>
+  <reservedname>SETTINGS</reservedname>
+  <icon>./images/icons/icon.png</icon>
+  <description>Modify user and site settings..</description>
+  <files>
+      <file>
+        <name>User Settings</name>
+        <description>Modify your E-Mail, password and other settings.</description>
+        <reservedname>USERSETTINGS</reservedname>
+        <filename>user_settings.php</filename>
+        <icon>./images/icons/icon.png</icon>
+        <addto>SETTINGS</addto>
+      </file>
+      <file>
+        <filename>site_settings.php</filename>
+        <name>Site Settings</name>
+        <description>Modify site settings..</description>
+        <reservedname>SITESETTINGS</reservedname>
+        <icon>./images/icons/icon.png</icon>
+        <addto>SETTINGS</addto>
+      </file>
+  </files>
+</section>
+

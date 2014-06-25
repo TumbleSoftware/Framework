@@ -1,0 +1,193 @@
+/*A CSS stylesheet to handle form elements, this class strictly deals with positioning and not styling*/
+/*Set widths so the inputs are spaced evenly*/
+.tumble-software-form
+{
+    padding: 0px;
+    margin: 0px;
+  display: inline-block;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+  width: 100%;
+  font-size: 0;
+}
+
+.tumble-software-form h2
+{
+    font-size: 20px;
+}
+
+
+
+
+.tumble-software-form-span1
+{
+    width: 100%;
+}
+
+.tumble-software-form-span2
+{
+    width: 50%;
+}
+
+.tumble-software-form-span3
+{
+    width: 33.33333%;
+}
+
+.tumble-software-form-span4
+{
+    width: 25%;
+}
+
+.tumble-software-form-span5
+{
+    width: 20%;
+}
+
+/*Make sure all the inputs have the same, height, padding and margins*/
+.tumble-software-form input, .tumble-software-form button
+{
+  display: inline-block;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+  padding: 5px;
+  height: 40px;
+  margin: 0px;
+
+
+}
+
+/*Make the inputs fill the width of the container and make sure the wrapper is the length of it's container*/
+.tumble-software-form-inline
+{
+      display: inline-block;
+      -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	    box-sizing: border-box;         /* Opera/IE 8+ */
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+      font-size: 0;
+}
+
+/*Make the wrapper of an input which is inline wrap around the input*/
+.tumble-software-form-inline-input
+{
+  display: inline-block;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.tumble-software-form-inline-input > input
+{
+    width: 100%;
+}
+
+.tumble-software-form-inline-input
+{
+    padding: 0 2px;
+}
+
+.tumble-software-inline-submit-button
+{
+    float: right;
+}
+
+.tumble-software-inline-fields
+{
+    display: block;
+    overflow: hidden;
+}
+
+/*Column styles*/
+
+.tumble-software-form-column-input
+{
+  display: inline-block;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+  
+  margin-bottom: 5px;
+}
+
+.tumble-software-form-column-input input
+{
+    width: 100%;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.tumble-software-form-column-input label
+{
+    display: block;
+    font-weight: 800;
+    padding: 3px 0px;
+}
+
+.tumble-software-input-checkbox label
+{
+    float: right;
+    margin-left: 10px;
+}
+
+.tumble-software-input-checkbox > .tumble-tooltip-element-wrapper
+{
+    display: inline-block;
+}
+
+
+.tumble-software-form-column-input input[type='checkbox']
+{
+   width: 14px;
+   height: 14px;
+   float: left;
+   overflow: auto;
+   margin: 6px 0px;
+}
+
+.tumble-software-input-text,.tumble-software-input-password, .tumble-software-input-button, .tumble-software-input-add-many
+{
+    width: 100%;
+}
+
+.tumble-software-add-many
+{
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+/*Error messages*/
+
+.tumble-software-messages
+{
+  display: inline-block;
+  width: 100%;
+}
+
+
+.tumble-software-errors
+{
+  color: #D8000C;
+  background-color: #FFBABA; 
+  display: block;
+  width: 100%;
+  border-width: 2px;
+  font-size: 14px;
+  margin-bottom: 5px;
+  padding: 3px 10px;
+      -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}

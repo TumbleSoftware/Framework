@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1250">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+  <link rel = "stylesheet" type = "text/css" href="./javascript/add-many/css/style.css" />
+  <link rel = "stylesheet" type = "text/css" href="./css/jquery_ui/jquery-ui-1.10.4.custom.css" />
+  <title></title>
+  </head>
+  <body>
+     <div class = "container">
+     
+        <div id = "people">
+        
+        </div>
+     
+     </div>
+     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+      <script src="./javascript/jquery_ui/jquery-ui-1.10.4.custom.min.js"></script>
+     <script src="./javascript/add-many/add_many.js"></script>
+     <script>
+          $('#people').TumbleAddMany({
+                                      'name':'add_data',
+                                      'values':[[{'name':'test','value': 'FredBloggs'},{'name':'test2','value': 'FredBloggs'},{'name':'test3','value': 'FredBloggs'},{'name':'email','value': '1'},{'name':'ren','value': '1'}]],
+                                      'template':'./javascript/add-many/templates/default.html',
+                                      'fields':[{'name':'test',
+                                                'title': 'First Name',
+                                                'type': 'text',
+                                                'defaultValue': '',
+                                                'possibleValues':{'false':'No','true':'Yes'}                                     
+                                                },
+                                                {'name':'test2',
+                                                'title': 'Last Name',
+                                                'type': 'text',
+                                                'defaultValue': '',
+                                                'possibleValues':{'false':'No','true':'Yes'}                                     
+                                                },
+                                                {'name':'test3',
+                                                'title': 'E-Mail',
+                                                'type': 'text',
+                                                'defaultValue': '',
+                                                'possibleValues':{'false':'No','true':'Yes'}                                     
+                                                },
+                                                {'name':'email',
+                                                'title': 'Checkbox',
+                                                'type': 'check',
+                                                'defaultValue': '',
+                                                'possibleValues':{'0':'No','1':'Yes'}                                     
+                                                },
+                                                {'name':'ren',
+                                                'title': 'select',
+                                                'type': 'select',
+                                                'defaultValue': '',
+                                                'possibleValues':{'0':'No1','1':'Yes1'}                                     
+                                                }                                               
+                                                ],
+                                      'id': 'contact-details'
+                                      });
+     </script>
+  </body>
+</html>

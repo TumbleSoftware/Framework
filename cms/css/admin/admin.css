@@ -1,0 +1,291 @@
+/* CSS Document */
+/*Admin styles*/
+
+
+
+
+/*common styles*/
+.tumble-software-header-style
+{
+    padding-bottom: 5px;
+    border-bottom: 3px solid #dcdcdc;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+main h2 img
+{
+    height: 35px;
+    width: 35px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+main div.info-box
+{
+    display: block;
+    padding: 5px 10px;
+    background-color: #dcdcdc;
+    margin-bottom: 10px;    
+}
+
+main div.info-box p
+{
+    font-size: 16px;
+}
+
+/*End of common styles*/
+
+.tumble-software-admin-wrapper
+{
+    display: inline-block;
+    width: 100%;
+    font-size: 0;
+}
+
+.tumble-software-left-column
+{
+    display: inline-block;
+    width: 30%;
+    padding: 0 10px;
+    	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */ 
+}
+
+.tumble-software-right-column
+{
+    display: inline-block;
+    width: 70%;
+    vertical-align: top;
+    padding: 0 10px;
+        	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */ 
+}
+
+.tumble-software-right-column h2
+{
+    font-size: 20px;
+    margin-top: 0px;
+}
+
+/*Navigation*/
+
+nav.site-menu .menu-segment
+{
+-webkit-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.39);
+-moz-box-shadow:    0px 0px 15px 0px rgba(50, 50, 50, 0.39);
+box-shadow:         0px 0px 15px 0px rgba(50, 50, 50, 0.39);
+display: inline-block;
+width: 100%;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+  margin-bottom: 10px; 
+}
+
+nav.site-menu .menu-segment .site-menu-segment-header
+{
+  display: block; 
+  
+  border-radius:4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+
+    
+    border:1px solid #DCA;
+    background:#252a30;
+}
+
+nav.site-menu .menu-segment .site-menu-header-link
+{
+    display: block;
+    overflow: hidden;
+    padding:14px 20px;
+    line-height:16px;
+    font-size: 16px;
+    font-weight: 800;
+    text-decoration: none;
+    color:#dcdcdc;
+}
+
+nav.site-menu .menu-segment > a img
+{
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  ;
+}
+
+nav.site-menu .menu-segment .menu-segment-sub-menu > a
+{
+    display: block;
+    color:#111;
+    background:#fffAF0;
+    
+    line-height:16px;
+    font-size: 14px;
+    padding:14px 20px;  
+
+}
+
+
+/*Home main menu*/
+
+.home-menu-front-item 
+{
+    display: inline-block;
+    width: 100%;
+    
+          border-radius:4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.39);
+-moz-box-shadow:    0px 0px 15px 0px rgba(50, 50, 50, 0.39);
+box-shadow:         0px 0px 15px 0px rgba(50, 50, 50, 0.39);
+
+margin-bottom: 20px;
+}
+
+.home-menu-front-item .home-menu-front-image
+{
+    
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-right: 10px;
+
+}
+
+.home-menu-front-item .home-menu-front-image img
+{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.home-menu-front-item-links
+{
+    display: block;
+    overflow: hidden;
+}
+
+.home-menu-front-item-links h3
+{
+    font-size: 20px;
+      border-radius:4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+
+    color:#dcdcdc;
+    border:1px solid #DCA;
+    background:#252a30;
+    margin-top: 0px;
+    padding:14px 20px;
+}
+
+.home-menu-front-item-links h3 a
+{
+    color: #dcdcdc;
+    text-decoration: none;
+}
+
+.home-menu-front-item-links p
+{
+    color: #dcdcd;
+    font-size: 14px;
+    padding:2px 20px; 
+}
+
+/*Accordian*/
+.tumble-software-accordian-min
+{
+    width: 30px;
+    height: 30px;
+    background-image: url(../../images/icons/max.png);
+    background-size: 100% 100%;
+    float: right;
+}
+
+.tumble-software-collapsed-open
+{
+    display: inline-block;
+}
+
+.tumble-software-collapsed
+{
+    display: none;
+}
+
+.home-menu-sub-link
+{
+    display: inline-block;
+    width: 50%;
+    margin-left: -10px;
+    
+
+}
+
+.home-menu-sub-links
+{
+    padding-bottom: 10px;
+        -webkit-box-shadow: inset -10px -10px 27px -6px #dcdcdc;
+
+-moz-box-shadow: inset -10px -10px 27px -6px #dcdcdc;
+
+box-shadow: inset -10px -10px 27px -6px #dcdcdc;
+background-color: #fffAF0;
+      border-radius:4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+
+.home-menu-sub-link a
+{
+  color: #252a30;
+  text-decoration: none;
+  font-size: 16px;
+  padding:14px 20px;
+  
+}
+
+.home-menu-sub-link a img
+{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/*Common classes*/
+
+
+
+
+
+
+.tumble-software-common-info-box
+{
+        display: inline-block;
+        width: 100%;
+        border-radius:4px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.39);
+        -moz-box-shadow:    0px 0px 15px 0px rgba(50, 50, 50, 0.39);
+        box-shadow:         0px 0px 15px 0px rgba(50, 50, 50, 0.39);
+        
+        margin-bottom: 20px;
+}
+
+.tumble-software-common-info-box p
+{
+    font-size: 14px;
+    color: #252a30;
+    background-color: #fffAF0;
+    padding:14px 20px;
+
+}
+
+

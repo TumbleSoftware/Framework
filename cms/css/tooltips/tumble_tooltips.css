@@ -1,0 +1,98 @@
+/* CSS Document */
+/*TumbleTooltips*/
+/*A CSS only solution to tooltips*/
+.tumble-tooltip-element-wrapper{position: relative;  }
+.tumble-tooltip-tooltip{position: absolute; display: none;
+
+/*User defined styling*/
+    border-radius:4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+        
+    -moz-box-shadow: 5px 5px 8px #CCC;
+    -webkit-box-shadow: 5px 5px 8px #CCC;
+    box-shadow: 5px 5px 8px #CCC;
+    color:#111;
+    border:1px solid #DCA;
+    background:#fffAF0;
+    padding:14px 20px;
+    line-height:16px;
+    z-index: 2000;
+    width: 200px;
+}
+
+.tooltip-error-class
+{
+       
+color: #D8000C;
+background-color: #FFBABA;
+border: 1px solid;
+display: block;
+}
+
+
+
+
+
+/*Custom gradient styles for each direction*/
+.tumble-tooltip-background-left
+{
+
+
+
+
+
+}
+
+
+
+/*CSS to do with the tip which points at what the tooltip is refering to*/
+.tumble-tooltip-tip{  border-right:1px solid #DCA;
+                      border-top:1px solid #DCA;
+                      
+                      background:#fffAF0;
+                      position: absolute;
+                          
+                  }
+
+.tooltip-error-class > .tumble-tooltip-tip
+{
+   border-right:1px solid;
+                      border-top:1px solid;
+color: #D8000C;
+background-color: #FFBABA;
+                      position: absolute;
+}
+
+.tumble-tooltip-tip-left{-webkit-transform: rotate(45deg); 
+-moz-transform: rotate(45deg); 
+-o-transform: rotate(45deg);
+-ms-transform: rotate(45deg);
+
+
+ }
+ 
+ .tumble-tooltip-tip-top{-webkit-transform: rotate(135deg); 
+-moz-transform: rotate(135deg); 
+-o-transform: rotate(135deg);
+-ms-transform: rotate(135deg);
+
+
+ }
+ 
+  .tumble-tooltip-tip-right{-webkit-transform: rotate(225deg); 
+-moz-transform: rotate(225deg); 
+-o-transform: rotate(225deg);
+-ms-transform: rotate(225deg);
+
+
+ }
+ 
+  .tumble-tooltip-tip-bottom{-webkit-transform: rotate(315deg); 
+-moz-transform: rotate(315deg); 
+-o-transform: rotate(315deg);
+-ms-transform: rotate(315deg);
+
+
+ }
+

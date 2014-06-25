@@ -1,0 +1,298 @@
+/* CSS Document */
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
+
+html, body
+{
+    margin: 0px; 
+    padding: 0px;
+    font-family: 'Source Sans Pro';
+    height: 100%;
+    min-height: 100%;
+}
+
+body{padding-bottom:40px;}
+
+header
+{
+   background-color: #252a30;
+   text-align: center;
+   position: relative;
+}
+
+header > img
+{
+    vertical-align: middle;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+header h1
+{
+    display: inline-block;
+    color: #DCDCDC;
+}
+
+
+
+
+
+/*Navigation*/
+header nav,main, footer
+{
+   width: 970px; 
+}
+main{min-height: 100%;}
+
+.common-border
+{
+    padding: 5px;
+border-radius: 10px;
+border: 10px solid #dcdcdc;
+}
+
+/*Main section*/
+main
+{
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+main section h2
+{
+    padding-bottom: 5px;
+    border-bottom: 3px solid #dcdcdc;
+}
+
+
+main > section
+{
+    display: inline-block;
+    width: 100%;
+    margin: 5px 0;
+}
+
+/*Breadcrumbs*/
+
+.breadcrumbs
+{
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    
+}
+
+.breadcrumbs span
+{
+   display: table-cell;
+   vertical-align: middle;
+   text-align: center;
+   background-color: #cccccc;
+   height: 30px;
+ 
+}
+
+.breadcrumbs span div
+{
+    
+    width: 100%;
+    position: relative;
+    display: inline-block;
+   
+}
+
+
+.breadcrumbs span div:nth-child(1):after
+{
+     z-index: 20; 
+}
+.breadcrumbs span div:nth-child(2):after
+{
+     z-index: 19; 
+}
+.breadcrumbs span div:nth-child(3):after
+{
+     z-index: 18; 
+}
+.breadcrumbs span div:nth-child(5):after
+{
+     z-index: 17; 
+}
+.breadcrumbs span div:nth-child(5):after
+{
+     z-index: 16; 
+}
+.breadcrumbs span div:nth-child(6):after
+{
+     z-index: 15; 
+}
+.breadcrumbs span:nth-child(1)
+{
+   background-color: #dcdcdc;
+  
+}
+
+.breadcrumbs span:nth-child(2)
+{
+   background-color: #E0E0E0;
+  
+}
+
+.breadcrumbs span:nth-child(3)
+{
+   background-color: #E3E3E3;
+  
+}
+
+.breadcrumbs span:nth-child(4)
+{
+   background-color: #E6E6E6;
+ 
+}
+
+.breadcrumbs span:nth-child(5)
+{
+   background-color: #EAEAEA;
+  
+}
+
+.breadcrumbs span:nth-child(6)
+{
+   background-color: #EEEEEE;
+ 
+}
+
+.breadcrumbs span div:after
+{
+   content: " ";
+   position: absolute;
+   height: 20px;
+   width: 20px;
+   display: inline-block;
+     -webkit-transform: rotate(45deg); 
+-moz-transform: rotate(45deg); 
+-o-transform: rotate(45deg);
+-ms-transform: rotate(45deg);
+border-top: 2px solid #ffffff;
+border-right: 2px solid #ffffff;
+right: -15px;
+top: 0px;
+ 
+
+}
+
+.breadcrumbs span a
+{
+    color: #000000;
+
+}
+
+/*form styles*/
+/*Please mpte only presentation styles such as background-color and border-color should be edited here*/
+.form-wrapper
+{
+    margin: 0 auto;
+    display: block;
+    padding: 5px;
+    border-radius: 10px;
+    border: 10px solid #dcdcdc;
+}
+
+input
+{
+   border: 2px solid #dcdcdc;
+   font-size: 16px;
+   color: #243743;
+
+}
+
+input:focus
+{
+-webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+}
+
+input.tumble-tooltip-error-input
+{
+   -webkit-box-shadow: 0px 0px 5px 0px rgba(255, 0, 0, 0.75);
+-moz-box-shadow:    0px 0px 5px 0px rgba(255, 0, 0, 0.75);
+box-shadow:         0px 0px 5px 0px rgba(255, 0, 0, 0.75);
+}
+
+label
+{
+    color:#484043;
+    font-size: 16px;
+}
+
+button{
+    background-color: #dcdcdc;
+    border: 2px solid #EEEEEE;
+}
+
+::-webkit-input-placeholder {
+   color: #8A949B;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: #8A949B;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #8A949B;  
+}
+
+:-ms-input-placeholder {  
+   color: #8A949B;  
+}
+
+.tumble-tooltip-element-wrapper
+{
+    font-size: 14px;
+}
+
+/*messages*/
+.tumble-software-form-info
+{
+  display: block;
+  border-width: 2px;
+  background-color: #dcdcdc;
+  color: #000000;
+  padding: 10px;
+  font-size: 14px;
+  margin-bottom: 10px;  
+}
+
+.add-admin-settings
+{
+    
+    width: 50%;
+    display: inline-block;
+    font-size: 0;
+    vertical-align: top;
+}
+
+.installation-progress
+{
+    font-size: 14px;
+}
+
+/*Footer*/
+footer
+{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0px;
+    background-color: #252a30;
+
+
+}
+
+footer p
+{
+    color: #dcdcdc;
+}
+

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<files>
+<file>phperrors.php</file>
+<file>common_objects.php</file>
+<file>database.php</file>
+<file>site_config.php</file>
+<file>connection_settings.php</file>
+<file>time_class.php</file>
+<file>page.php</file>
+<file>tree.php</file>
+<file>menu.php</file>
+<file>form.php</file>
+<file>ajax.php</file>
+<file>param.php</file>
+
+<file>validate.php</file>
+<file>messages.php</file>
+
+<file>redirect.php</file>
+<file>tooltips.php</file>
+<file>create_database.php</file>
+<file>common_functions.php</file>
+<file>user.php</file>
+<file>xml.php</file>
+</files> 
+
